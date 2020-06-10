@@ -10,7 +10,7 @@ public class J1_FrequencyOfChars {
     //Ex:  FrequencyOfChars("AAABBCDD") ==> A3B2C1D2
 
     public static void main(String[] args) {
-        String str="AAABBCDD";
+        String str="AAABBCDDcc";
         System.out.println(FrequencyOfChars(str));
         System.out.println(FrequencyOfChars2(str));
 
