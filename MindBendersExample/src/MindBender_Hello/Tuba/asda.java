@@ -1,7 +1,10 @@
 package MindBender_Hello.Tuba;
 
 public class asda {
-  
-  System.out.print("HEYY Sevgin!! :) ");
-  
+  public static void main(String[] args) {
+
+
+    System.out.print("HEYY Sevgin!! :) ");
+
+  }
 }
