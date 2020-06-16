@@ -23,3 +23,5 @@ public class Q8_9_Max_and_Min {
         MinNumber(new int[] {10, 5, 8, 0, 13, 4});
     }
 }
+
+  
