@@ -1,6 +1,6 @@
 package MindBender_Hello.Shevgin.Interview;
 
-public class J8 {
+public class J8_J9 {
     //Write a method that can find the maximum number from an int Array
 
     public static void main(String[] args) {

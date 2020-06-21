@@ -1,8 +1,8 @@
-package interviewQ_part1.Practice;
+package MindBender_Hello.Ramazan;
 
 import java.util.Arrays;
 
-public class Array_Ascending {
+public class Array_Ascending_2{
     //Write a return method that can sort an int array in Ascending order
     // without using the sort method of the Arrays class
     public static void main(String[] args) {
