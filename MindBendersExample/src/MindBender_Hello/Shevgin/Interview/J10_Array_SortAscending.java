@@ -14,7 +14,7 @@ Ex:
              arr = Sort(arr);         ==>{ 7, 8, 9, 10};
      */
     public static void main(String[] args) {
-        int [] ss={-5,19,8,15,25,3};
+        int [] ss={-5,19,8,15,2500000,3};
         System.out.println(Arrays.toString(ascending(ss)));
 
         System.out.println(Arrays.toString(Sort(ss)));
@@ -27,10 +27,12 @@ Ex:
 
             for (int j=0 ;j<arr.length ;j++){
 
-                if (arr[i]<arr[j]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
+                if (arr[i]<arr[j]) {      //arr0 arr0
+                                            // arr0 arr1 -5<19
+                                            // arr0 arrr2
+                    int temp = arr[i]; //temp=-5
+                    arr[i] = arr[j]; //  arr0 arr1 arr0=19
+                    arr[j] = temp;   // arrj=-5
                 }
             }
         }
