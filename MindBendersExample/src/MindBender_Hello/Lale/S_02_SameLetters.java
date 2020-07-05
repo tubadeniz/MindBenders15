@@ -46,7 +46,9 @@ same("abc",  "abb"); -> false:
                 same = false;
         }
         return same;
-//njnm m
+
+
+        //njnm m
     }
 }
 
