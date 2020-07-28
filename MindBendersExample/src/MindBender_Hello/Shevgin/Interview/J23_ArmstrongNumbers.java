@@ -24,9 +24,9 @@ public class J23_ArmstrongNumbers {
         int a , b , c;
         double result;
 
-        a=num%10; //1
-        b=(num-a)/10%10; //
-        c=(num-a-(b*10))/100%10;
+        a=num%10; //1  371%10
+        b=(num-a)/10%10; //370/10 %10 =37%10 =7
+        c=(num-a-(b*10))/100%10; //371-71 =300/100=3%10 =3
 
         result= Math.pow(a, 3) +Math.pow(b,3)+Math.pow(c,3); // base and exponent
 //        System.out.println(a+"+"+b+"+"+c+"+"+result);
