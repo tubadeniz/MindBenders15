@@ -2,26 +2,32 @@ package MindBender_Hello.Shevgin.Interview;
 
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class J1_FrequencyOfChars {
     //Write a return method that can find the frequency of characters
     //
     //Ex:  FrequencyOfChars("AAABBCDD") ==> A3B2C1D2
 
+    //ABCD
+    //3212
+
     public static void main(String[] args) {
         String str="AAABBCDDcc";
         System.out.println(FrequencyOfChars(str));
         System.out.println(FrequencyOfChars2(str));
+        System.out.println(frequencymix(str));
 
 
     }
-    public static String FrequencyOfChars(String str) {
+    public static String FrequencyOfChars(String str) { //AAABBCDDcc
         String nonDub="";
 
 
         for (int i=0; i<str.length() ; i++){
-            if (!nonDub.contains(""+str.charAt(i))) nonDub += str.charAt(i) ; //ABCD
+            if (!nonDub.contains(""+str.charAt(i))) nonDub += str.charAt(i) ; //ABCDc
         }
 
         String result= "";
@@ -39,7 +45,7 @@ public class J1_FrequencyOfChars {
 
 
             }
-            result +=""+nonDub.charAt(i)+count; //A3B5
+            result +=""+nonDub.charAt(i)+count; //A3B2
 
 
         }
@@ -50,7 +56,8 @@ public class J1_FrequencyOfChars {
     }
     public  static  String  FrequencyOfChars2(String str) {
 
-        String b=new LinkedHashSet<>(Arrays.asList(str.split(""))).toString();
+        String b=new LinkedHashSet<>(Arrays.asList(str.split(""))).toString(); //[A,B,C,D,c]
+        System.out.println(b);
 
         b = b.replace(", ","").replace("[","").replace("]","");
 
@@ -74,6 +81,52 @@ public class J1_FrequencyOfChars {
 
         return result;
 
+    }
+
+    public static String frequency(String str) {
+
+        String nonDup="", result="";
+
+        for(int i=0; i < str.length(); i++)
+
+            if(! nonDup.contains(""+str.charAt(i)))
+
+                nonDup += ""+str.charAt(i);
+
+
+
+        for(int i=0; i < nonDup.length(); i++) {
+
+            int num = Collections.frequency( Arrays.asList(str.split("") ) ,    ""+nonDup.charAt( i ) );
+
+            result += ""+nonDup.charAt(i) + num;
+
+        }
+
+
+
+        return result;
+
+    }
+
+    public static String frequencymix(String str){
+        Set<String> list=new LinkedHashSet<>(Arrays.asList(str.split("")));
+        String nonDup=list.toString(); //[A,B,C,D,c]
+
+        System.out.println(nonDup);
+
+        nonDup = nonDup.replace(", ","").replace("[","").replace("]","");
+
+        String result="";
+
+        for(int i=0; i < nonDup.length(); i++) {
+
+            int num = Collections.frequency( Arrays.asList(str.split("") ) ,    ""+nonDup.charAt( i ) );
+
+            result += ""+nonDup.charAt(i) + num;
+
+        }
+        return result;
     }
 
 }

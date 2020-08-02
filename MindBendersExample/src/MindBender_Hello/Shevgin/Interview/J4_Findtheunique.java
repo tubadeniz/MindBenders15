@@ -85,7 +85,7 @@ public class J4_Findtheunique {
 
         String result ="";
 
-        for (int k=0;k<str.length() ;k++ ){
+        for (int k=0;k<str.length() ;k++ ){ //Baaca
 
             if (str.indexOf(str.charAt(k))==str.lastIndexOf(str.charAt(k))) {
                 result +=str.charAt(k);
